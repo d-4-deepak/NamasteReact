@@ -1,0 +1,12 @@
+what parcel do under the hood
+
+-Dev Build
+-Local server provides
+-HMR
+-File working Algorithm - written in c++
+- Caching - faster builds
+-file minification
+- Bundling
+-Compress
+-COnsistent hashing 
+-Tree Shaking
