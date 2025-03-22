@@ -1,1 +1,1 @@
-This React.js code notes
+This React.js code notes from namaste react.js
