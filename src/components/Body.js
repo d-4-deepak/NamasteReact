@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 import ShimmerUI from "./ShimmerUI";
 const Body = ()=>{
@@ -18,15 +19,18 @@ const Body = ()=>{
 
         const json = await data.json();
         
-        // console.log(json);
+        //  console.log(json);
        
             //Finding the card which contain gridElements and further
         const restaurantCard = json.data.cards.find((card)=>
             card?.card?.card?.gridElements?.infoWithStyle?.restaurants
         )
-          const restaurants = restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
-          setListRestaurant(restaurants); 
-          setFilteredRestaurtant(restaurants)
+        // console.log("list of res car ",restaurantCard);
+        
+        const allRestaurants = restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants
+                
+             setListRestaurant(allRestaurants); 
+          setFilteredRestaurtant(allRestaurants)
           
     };
 
@@ -54,7 +58,7 @@ const Body = ()=>{
     <div className="res-container">
         {
         filteredRestaurtant.map((restaurant)=>(
-            <RestaurantCard  key={restaurant.info.id} resData={restaurant}/>
+          <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}> <RestaurantCard   resData={restaurant}/></Link> 
         ))
         }
     </div>
