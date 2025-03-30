@@ -22,7 +22,7 @@ class About extends React.Component{
             <h2>This is about page</h2>
             {/* <User name="Deepak Gupta(function)"/> */}
             <UserClass name="first " location="Hoshiarpur(class)"/>
-            <UserClass name="second" location="Hoshiarpur(class)"/>
+            
         </div>
     )
         }
