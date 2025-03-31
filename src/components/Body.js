@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 import ShimmerUI from "./ShimmerUI";
 const Body = ()=>{
     const[listRestaurant,setListRestaurant] = useState([])
@@ -33,6 +33,10 @@ const Body = ()=>{
           setFilteredRestaurtant(allRestaurants)
           
     };
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus == false){
+        return <h1>Looks like  you are offLine!! please check your Internet Connection </h1>
+    }
 
       
     return  listRestaurant.length === 0?<ShimmerUI/>:(
