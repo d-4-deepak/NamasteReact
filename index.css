@@ -1,29 +1,10 @@
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid black;
-}
-.logo{
-    width: 200px;
-}
-.nav-items{
-    padding-right: 5rem;
-}
-.nav-items>ul{
-    display: flex;
-    list-style-type: none;
-    font-size: 24px;
-    & li{
-        padding: 10px;
-        margin: 10px;
-    }
-}
-.res-card{
+@import "tailwindcss";
+/* Hide scrollbar for Webkit browsers */
+
+/* .res-card{
    padding: 5px;
-   /*padding-left: 7px;
-   padding-top: 7px;
-   */width: 200px;
+  
+   width: 200px;
    height: 450px;
    text-align: center;
    box-sizing: border-box;
@@ -43,7 +24,6 @@
 }
 .res-logo{
   
-    /* width: 185px; */
     
 }
 
@@ -86,4 +66,4 @@
     padding: 10px;
     margin: 10px;
     border: 2px solid black;
-}
+} */
