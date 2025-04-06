@@ -13,7 +13,7 @@ const ItemList = (itemList)=>{
                     </div>
 
                     <div>
-                        <span>₹{item.card.info.price /100}</span>
+                        <span>₹{item.card.info.price ? item.card.info.price /100 : item.card.info.defaultPrice / 100}</span>
                     </div>
 
                    <div > <p className="text-[0.9rem] font-medium text-gray-500 break-words w-full max-w-md pt-3 ">{item.card.info.description}</p></div>

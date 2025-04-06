@@ -1,8 +1,14 @@
-import {  useState } from "react";
+import {  useState,useContext } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 const Header = ()=> {
+
+    const {loggedInUser} = useContext(UserContext);
+    // console.log(data);
+    
+
     const onlineStatus = useOnlineStatus();
     const [button,setButton] = useState("Login");
     const handlebtn = ()=>{
@@ -32,6 +38,7 @@ const Header = ()=> {
                  <li ><Link to='/grocery'>Grocery</Link>   </li>
                 <li className="cursor-pointer">Cart</li>
                 <button className="px-6 ml-2 font-bold rounded-lg cursor-pointer bg-gray-200 hover:bg-gray-300" onClick={handlebtn}>{button}</button>
+                <li className="cursor-pointer font-bold">{loggedInUser}</li>
             </ul>
         </div>
 

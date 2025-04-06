@@ -5,10 +5,12 @@ import { useParams } from "react-router";
 // import { MENU_API } from "../utils/constant";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 
 
 const RestaurantMenu = ()=>{
 
+  const [showIndex,setShowIndex] = useState(0);
      const {resId}=useParams();
 
     console.log(resId);
@@ -72,11 +74,12 @@ const RestaurantMenu = ()=>{
        </div> 
    <div className="mt-20">
         {
-          categories.map((category)=>{
+          categories.map((category,index)=>{
 
             return(
+              //CONTROLLED COMPONENT
               <RestaurantCategory key={category.card.card.
-                categoryId} data ={category.card.card}/>
+                categoryId} data ={category.card.card} showItems = {index===showIndex ? true : false} setShowIndex = {()=>setShowIndex(index===showIndex? null : index)}/>
             )
           })
         }
