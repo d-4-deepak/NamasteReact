@@ -1,6 +1,13 @@
 import { MENU_IMGURL } from "../utils/constant";
+import { addItems } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 const ItemList = (itemList)=>{
     console.log("itemList",itemList);
+        const dispatch = useDispatch();
+    const handleClickAddItems = (item)=>{
+            //dispatch an action
+            dispatch(addItems(item));
+    }
     
     return (
         <div>{itemList.data.map((item)=> (
@@ -26,7 +33,7 @@ const ItemList = (itemList)=>{
                                 
                             }
                             <div className="absolute bottom-[-10] left-1/2 transform -translate-x-1/2 shadow-sm text-center ">
-                                <button className="bg-white text-green-700 font-semibold text-[1.2rem] px-6 py-1 border border-gray-200 rounded-lg" >
+                                <button className="bg-white text-green-700 font-semibold text-[1.2rem] px-6 py-1 border border-gray-200 rounded-lg cursor-pointer" onClick={()=>handleClickAddItems(item)} >
                                     ADD+
                                 </button>
                             </div>
