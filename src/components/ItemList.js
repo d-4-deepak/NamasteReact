@@ -1,12 +1,18 @@
 import { MENU_IMGURL } from "../utils/constant";
 import { addItems } from "../utils/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const ItemList = (itemList)=>{
     console.log("itemList",itemList);
         const dispatch = useDispatch();
+
+        const cartItems = useSelector((store)=>store.cart.items);
+
     const handleClickAddItems = (item)=>{
             //dispatch an action
-            dispatch(addItems(item));
+            if(!cartItems.includes(item)){
+                dispatch(addItems(item));
+            }
+           
     }
     
     return (

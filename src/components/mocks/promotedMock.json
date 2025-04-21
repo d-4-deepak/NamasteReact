@@ -1,0 +1,72 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "151509",
+        "name": "Dawat Restaurant (hotel Surya)",
+        "cloudinaryImageId": "pegljnajfpylaxlni05s",
+        "locality": "Sinchai Colony",
+        "areaName": "Chhindwara Locality",
+        "costForTwo": "₹200 for two",
+        "cuisines": [
+            "Chinese",
+            "South Indian"
+        ],
+        "avgRating": 4.8,
+        "parentId": "68916",
+        "avgRatingString": "4.8",
+        "totalRatingsString": "29",
+        "sla": {
+            "deliveryTime": 57,
+            "lastMileTravel": 11.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "55-60 mins",
+            "lastMileTravelString": "11.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextOpenTimeMessage": "Opens next at 8:15 am, tomorrow"
+        },
+        "badges": {},
+        "aggregatedDiscountInfoV2": {},
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-71b5ce90-8b02-4c9a-9458-bc72c42a3741"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/chhindwara/dawat-restaurant-hotel-surya-sinchai-colony-chhindwara-locality-rest151509",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

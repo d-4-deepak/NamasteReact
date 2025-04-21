@@ -3,6 +3,8 @@ const RestaurantCard = (props)=>{
     
 
     const {resData} = props;
+    console.log(resData);
+    
     const {name,cuisines,avgRating,sla,cloudinaryImageId,costForTwo} = resData?.info;
 
    return (
@@ -21,8 +23,8 @@ const RestaurantCard = (props)=>{
 
 export const withPromotedLabel = (RestaurantCard)=>{
     return (props)=>{
-        // console.log("props have",props);
-        // console.log("props spread have",{...props});
+        console.log("props have",props);
+        console.log("props spread have",{...props});
         
         return (
             <div>
