@@ -17,7 +17,7 @@ const ItemList = (itemList)=>{
     
     return (
         <div>{itemList.data.map((item)=> (
-            <div key={item.card.info.id} className="m-4 p-8 border-b-2  border-gray-200 hover:bg-gray-100">
+            <div data-testid="foodItems" key={item.card.info.id} className="m-4 p-8 border-b-2  border-gray-200 hover:bg-gray-100">
              <div className="flex flex-wrap  justify-between gap-4">
                 <div className="w-full md:w-3/4">
 

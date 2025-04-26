@@ -82,7 +82,7 @@ const Body = ()=>{
     <div className="px-48 text-center w-full">
         <div className="flex justify-between items-center">
         <div className="p-4 m-4">
-            <input type="text" className="border border-black " value={searchText} onChange={(e)=>setSearchText(e.target.value)}>
+            <input data-testid = "searchInput" type="text" className="border border-black " value={searchText} onChange={(e)=>setSearchText(e.target.value)}>
             </input>
             {/* filter the restaurant cards and update the UI */}
             <button className="m-4 px-4 py-1 bg-green-200 rounded-sm" onClick={()=>{
